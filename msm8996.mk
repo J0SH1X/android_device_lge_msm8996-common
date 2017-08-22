@@ -20,7 +20,7 @@ $(call inherit-product-if-exists, vendor/lge/msm8996-common/msm8996-common-vendo
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+#DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -166,8 +166,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl
 
 # Doze mode
-PRODUCT_PACKAGES += \
-    LGDoze
+#PRODUCT_PACKAGES += \
+#    LGDoze
 
 # DRM
 PRODUCT_PACKAGES += \
