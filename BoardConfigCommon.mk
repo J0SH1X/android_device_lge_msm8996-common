@@ -45,7 +45,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
@@ -80,7 +80,7 @@ AUDIO_FEATURE_ENABLED_SPKR_PROTECTION := true
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
+#USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
@@ -111,8 +111,6 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 BOARD_USES_QCNE := true
 
 # CPU
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
 TARGET_USES_INTERACTION_BOOST := true
 
 # Display
@@ -176,17 +174,17 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
-PRODUCT_BOOT_JARS += tcmiface tcmclient com.qti.dpmframework dpmapi com.qti.location.sdk
+#PRODUCT_BOOT_JARS += tcmiface tcmclient com.qti.dpmframework dpmapi com.qti.location.sdk
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
-TARGET_RIL_VARIANT := caf
+#TARGET_RIL_VARIANT := caf
 
 # SELinux policies
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
